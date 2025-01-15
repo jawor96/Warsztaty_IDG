@@ -6,7 +6,7 @@ Skonfigurowane laptopy przekazane przez trenerów.
 
 ### Laboratoria:
 
-1. Lab1 - Instalacja i inicjalizacja bramki IDG
+1. [Lab1 - Instalacja i inicjalizacja bramki IDG](https://github.com/jawor96/Warsztaty_IDG/Lab1)
 2. Lab2 - GUI IDG
 3. Lab3 - Zarządzanie IDG
 4. Lab4 - Narzędzia administracyjne i trobleshooting IDG
