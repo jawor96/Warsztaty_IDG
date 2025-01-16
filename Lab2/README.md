@@ -7,31 +7,31 @@
 
 1. Otwórz terminal i zaloguj się do interfejsu CLI via SSH, wpisując:
 
-    ssh 192.168.226.129
+```ssh 192.168.226.129```
 
 <img src="../images/Lab2_01.png" width="70%">
 
 2. Sprawdź status usługi SSH, wpisując:
 
-    show ssh
+```show ssh```
 
 <img src="../images/Lab2_02.png" width="70%">
 
 3. Sprawdź status usługi WebUI, wpisując:
 
-    show web-mgmt
+```show web-mgmt```
 
 <img src="../images/Lab2_03.png" width="70%">
 
 4. Sprawdź interfejsy sieciowe, wpisując:
 
-    show interface
+```show interface```
 
 <img src="../images/Lab2_04.png" width="70%">
 
 5. Sprawdź skonfigurowane adresy IP, wpisując:
 
-    show ipaddress
+```show ipaddress```
 
 <img src="../images/Lab2_05.png" width="70%">
 
@@ -84,13 +84,13 @@ exit
 
 3. Wyświetl listę dostępnych endpoint'ów dla parametrów konfiguracji w interfejsie REST.
 
-    https://192.168.226.129:5554/mgmt/config/
+```https://192.168.226.129:5554/mgmt/config/```
 
 <img src="../images/Lab2_11.png" width="70%">
 
 4. Wyświetl konfigurację usługi rest-mgmt
 
-    https://192.168.226.129:5554/mgmt/config/default/RestMgmtInterface/RestMgmt-Settings
+```https://192.168.226.129:5554/mgmt/config/default/RestMgmtInterface/RestMgmt-Settings```
 
 5. Przy pierwszym uruchomieniu zastrzeżonego URL należy najpierw zalogować się (użytkownik: `admin`, hasło: `P@ssw0rd!`).
 
@@ -107,39 +107,39 @@ exit
 3. Dla każdego zapytania należy ustawić metodę uwierzytelnienia (**Auth**) na **Basic** i podać użytkownika `admin` i hasło `P@ssw0rd!`.
 4. Sprawdź aktualny status daty i czasu (ustawienia domyślne):
 
-    GET /mgmt/status/default/DateTimeStatus
+```GET /mgmt/status/default/DateTimeStatus```
 
-<img src="../images/Lab2_14.png" width="70%">
+<img src="../images/Lab2_14.png" width="80%">
 
 5. Sprawdź aktualne ustawienia strefy czasowej:
 
-    GET /mgmt/config/default/TimeSettings/Time
+```GET /mgmt/config/default/TimeSettings/Time```
 
-<img src="../images/Lab2_15.png" width="70%">
+<img src="../images/Lab2_15.png" width="80%">
 
 6. Ustaw strefę czasową na naszą:
 
-    PUT /mgmt/config/default/TimeSettings/Time/LocalTimeZone
+```PUT /mgmt/config/default/TimeSettings/Time/LocalTimeZone```
 
 Payload (application/json):
 
-    {"LocalTimeZone": "CET-1CEST"}
+```{"LocalTimeZone": "CET-1CEST"}```
 
-<img src="../images/Lab2_16.png" width="70%">
+<img src="../images/Lab2_16.png" width="80%">
 
 7. Ponownie sprawdź aktualny status daty i czasu, ustawiony będzie nowy TimeZone:
 
-    GET /mgmt/status/default/DateTimeStatus
+```GET /mgmt/status/default/DateTimeStatus```
 
-<img src="../images/Lab2_17.png" width="70%">
+<img src="../images/Lab2_17.png" width="80%">
 
 8. Zapisz nową konfigurację domeny:
 
-    POST /mgmt/actionqueue/default
+```POST /mgmt/actionqueue/default```
 
 Payload: `{"SaveConfig" : "0"}`
 
-<img src="../images/Lab2_18.png" width="70%">
+<img src="../images/Lab2_18.png" width="80%">
 
 ## DataPower WebUI
 
@@ -154,15 +154,15 @@ Password: P@ssw0rd!
 
 2. Zweryfikuj ustawienia strefy czasowej, w oknie wyszukiwania wpisać `Time Sett` i wybrać menu. Jeżeli ustawienia są inne niż `CET (Central Europe Time)` to zmienić na nie.
 
-<img src="../images/Lab2_20.png" width="70%">
+<img src="../images/Lab2_20.png" width="80%">
 
 3. Wejdź na ustawienia usługi `Network -> Interface -> NTP service` i upewnić się, że jest wyłączona.
 
-<img src="../images/Lab2_21.png" width="70%">
+<img src="../images/Lab2_21.png" width="80%">
 
 4. W tym samym drzewie nawigacji wejść w DNS settings i wyłączyć usługę, przestawić Administrative state na disabled i zaaplikuj zmiany.
 
-<img src="../images/Lab2_22.png" width="70%">
+<img src="../images/Lab2_22.png" width="80%">
 
 5. Wrócić do głównego ekranu klikając `Control Panel`, a następnie przejść do `System Control`.
 
@@ -170,20 +170,20 @@ Password: P@ssw0rd!
 
 6. "Zepsuj" czas, cofając go np. o 1 godzinę.
 
-<img src="../images/Lab2_24.png" width="70%">
+<img src="../images/Lab2_24.png" width="80%">
 
-7. Wróć do ustawień `NTP Settings`, dodaj nowy serwer `time.google.com` oraz włączyć `Administrative state (enabled)`. Potwierd zmiany (`Apply`). Przy okazji zweryfikować na górnej belce, czy mamy "zepsuty" czas. Po akceptacji zmian, status usługi będzie nieaktywny, bo nie może rozwiązać nazwy serwera (wcześniej wyłączyliśmy konfigurację DNS).
+7. Wróć do ustawień `NTP Settings`, dodaj nowy serwer `time.google.com` oraz włączyć `Administrative state (enabled)`. Potwierdź zmiany (`Apply`). Przy okazji zweryfikować na górnej belce, czy mamy "zepsuty" czas. Po akceptacji zmian, status usługi będzie nieaktywny, bo nie może rozwiązać nazwy serwera (wcześniej wyłączyliśmy konfigurację DNS).
 
-<img src="../images/Lab2_25.png" width="70%">
+<img src="../images/Lab2_25.png" width="80%">
 
 8. Wróć do ustawień DNS i włączyć usługę (zaaplikuj zmiany). Czas na belce będzie jeszcze błędny.
 
-<img src="../images/Lab2_26.png" width="70%">
+<img src="../images/Lab2_26.png" width="80%">
 
 9. Wróć do ustawień `NTP service`, czas powinien być prawidłowy oraz usługa NTP powinna być uruchomiona.
 
-<img src="../images/Lab2_27.png" width="70%">
+<img src="../images/Lab2_27.png" width="80%">
 
 10. Pamiętaj, aby zapisać zmiany dokonane w konfiguracji IDG, klikając `Save Configuration`.
 
-<img src="../images/Lab2_28.png" width="70%">
+<img src="../images/Lab2_28.png" width="40%">
