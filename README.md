@@ -8,7 +8,7 @@ Skonfigurowane laptopy przekazane przez trenerów.
 
 1. [Lab1 - Instalacja i inicjalizacja bramki IDG](https://github.com/jawor96/Warsztaty_IDG/tree/main/Lab1)
 2. [Lab2 - GUI IDG](https://github.com/jawor96/Warsztaty_IDG/tree/main/Lab2)
-3. Lab3 - Zarządzanie IDG
+3. [Lab3 - Zarządzanie IDG](https://github.com/jawor96/Warsztaty_IDG/tree/main/Lab3)
 4. Lab4 - Narzędzia administracyjne i trobleshooting IDG
 5. Lab5 - Kopia, Eksport, Import
 6. Lab6 - Usługa Multi-Protocol Gateway IDG
