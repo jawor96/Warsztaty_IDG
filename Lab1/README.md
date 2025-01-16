@@ -85,8 +85,10 @@ Powinien zostać utworzony nowy katalog `datapower-vm`, a w nim pliki maszyny wi
 
 9. Na ekranie edycji parametrów maszyny wirtualnej zaznaczamy ilość procesorów i rdzeni:
 
-    Number of processors: 1
-    Number of cores per processor: 4
+```
+Number of processors: 1
+Number of cores per processor: 4
+```
 
 10. Dodatkowo, należy zmienić tryb połączenia pierwszej karty sieciowej: `Network Adapter` z domyślnej wartości `Bridged (Automatic)` na `NAT`
 
@@ -107,8 +109,10 @@ Ostatecznie, konfiguracja powinna wyglądać następująco:
 
 3. Proces uruchamiania maszyny DataPower powinien się zatrzymać prosząc użytkownika o wprowadzenie domyślnych danych do logowania. Należy wpisać:
 
-    login: admin
-    password: admin
+```
+login: admin
+password: admin
+```
 
 4. Po pomyślnym zalogowaniu, uruchamia się konfigurator, który przeprowadzi nam przez najważniejsze parametry systemu DataPower, które należy ustawić na samym początku.
 
@@ -162,14 +166,18 @@ Ostatecznie, konfiguracja powinna wyglądać następująco:
 
 7. Aby dostać się przez przeglądarkę do interfejsu graficznego musimy poznać adres IP jaki został przydzielony maszynie DataPower poprzez DHCP. Pozostając w terminalu należy wykonać następujące komendy:
 
-    configure
-    show interface
+```
+configure
+show interface
+```
 
 <img src="../images/Lab1_22.png" width="50%">
 
 8. Na stacji roboczej z której Panstwo korzystacie, adres IP może mieć inną wartość. Należy ją zapisać i wprowadzić do przeglądarki internetowej w postaci:
 
+```
     https://adresIP:9090
+```
 
 Korzystając z przykładu powyżej, URL do interfejsu graficznego będzie następujący:
 
@@ -183,8 +191,10 @@ Korzystając z przykładu powyżej, URL do interfejsu graficznego będzie nastę
 
 10. Zaloguj się, używając zmienionego wcześniej hasła:
 
-    Username: admin
-    Password: P@ssw0rd!
+```
+Username: admin
+Password: P@ssw0rd!
+```
 
 11. Następnie przejrzyj umowę licęcyjną i ją zaakceptuj.
 
@@ -196,8 +206,10 @@ Korzystając z przykładu powyżej, URL do interfejsu graficznego będzie nastę
 
 13. W kolejnym kroku pojawia się ponownie ekran logowania. Należy wpisać te same dane:
 
-    Username: admin
-    Password: P@ssw0rd!
+```
+Username: admin
+Password: P@ssw0rd!
+```
 
 14. Pierwsze logowanie po akceptacji licencji również trwa trochę dłużej (ok. 20-40 sekund), a nastęnie użytkownik zostaje przeniesiony do ekranu głównego interfejsu DataPower. 
 
@@ -216,13 +228,15 @@ Aby zwiększyć ergonomię pracy w trakcie tego szkolenia dobrym pomysłem jest 
 
 1. Na środowiskach deweloperskich lub szkoleniowych lepiej jest jednak wydłużyć ten czas na przykład do wartości 6000 sekund czyli 100 min. W tym celu w wyszukiwarce wpisz:
 
-    web management
+```
+web management
+```
 
 <img src="../images/Lab1_28.png" width="50%">
 
 2. Zmień wartość parametru: `Idle timeou`t z 600 na 6000 [seconds]
 
-3. Dodatkowo w zakładce `“Advanced”` mamy możliwość wgrania własnych certyfikatów (Custom TLS server profile), którymi DataPower będzie się przedstawiał użytkownikom w przeglądarce. 
+3. Dodatkowo w zakładce `Advanced` mamy możliwość wgrania własnych certyfikatów (Custom TLS server profile), którymi DataPower będzie się przedstawiał użytkownikom w przeglądarce. 
 
 Po wykonaniu zmian, należy wcisnąć przycisk `Apply`, a następnie w prawym górnym rogu `Save Configuration`.
 
