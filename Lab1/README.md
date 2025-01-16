@@ -157,6 +157,8 @@ Ostatecznie, konfiguracja powinna wyglądać następująco:
 
 ![](../images/Lab1_20.png)
 
+<img src="../images/Lab1_20.png" width="50%">
+
 6. Po zapisaniu konfiguracji, użytkownik jest proszony o akceptację umowy licencyjnej za pomocą interfejsu graficznego.
 
 ![](../images/Lab1_21.png)
