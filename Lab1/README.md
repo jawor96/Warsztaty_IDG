@@ -48,7 +48,7 @@ Powinien zostać utworzony nowy katalog `datapower-vm`, a w nim pliki maszyny wi
 
 1. Uruchamiamy aplikację `VMWare Workstation Pro` korzystając ze skrótku na pulpicie.
 
-<img src="../images/Lab1_05.png" width="30%">
+<img src="../images/Lab1_05.png" width="15%">
 
 2. Wybierz opcję `Open a Virtual Machine` i wskaż na katalog: `C:\DataPowerAdminTraining\Lab1\datapower-vm\idg10502.lts.nonprod`, a następnie `idg10502.lts.nonprod.vmx`.
 
@@ -175,11 +175,11 @@ Korzystając z przykładu powyżej, URL do interfejsu graficznego będzie nastę
 
     https://192.168.226.129:9090
 
-<img src="../images/Lab1_23.png" width="40%">
+<img src="../images/Lab1_23.png" width="50%">
 
 9. Przeglądarka ostrzeże przed niezaufanym certyfikatem. Należy zignorować tę informację i mimo to otworzyć stronę.
 
-<img src="../images/Lab1_24.png" width="40%">
+<img src="../images/Lab1_24.png" width="50%">
 
 10. Zaloguj się, używając zmienionego wcześniej hasła:
 
@@ -188,11 +188,11 @@ Korzystając z przykładu powyżej, URL do interfejsu graficznego będzie nastę
 
 11. Następnie przejrzyj umowę licęcyjną i ją zaakceptuj.
 
-<img src="../images/Lab1_25.png" width="40%">
+<img src="../images/Lab1_25.png" width="60%">
 
 12. Nie zamykaj żadnego z okien, poczekaj dłuższą chwilę (ok. 1 minuty). W tym czasie, maszyna DataPower aktywuje swoje wewnętrzne mechanizmy, aby za chwilę być gotowa to pracy.
 
-<img src="../images/Lab1_26.png" width="40%">
+<img src="../images/Lab1_26.png" width="60%">
 
 13. W kolejnym kroku pojawia się ponownie ekran logowania. Należy wpisać te same dane:
 
@@ -201,7 +201,7 @@ Korzystając z przykładu powyżej, URL do interfejsu graficznego będzie nastę
 
 14. Pierwsze logowanie po akceptacji licencji również trwa trochę dłużej (ok. 20-40 sekund), a nastęnie użytkownik zostaje przeniesiony do ekranu głównego interfejsu DataPower. 
 
-<img src="../images/Lab1_27.png" width="40%">
+<img src="../images/Lab1_27.png" width="50%">
 
 ## Podstawowe kroki administracyjne po pierwszym zalogowaniu
 
