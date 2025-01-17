@@ -172,11 +172,3 @@ Z głównego menu uruchomić zarządzanie plikami i sprawdzić szczegóły certy
 15. Możesz również sprawdzić usługę korzystając z SoapUI. Też otrzymasz certyfikat, a usługa odpowie nam "echem" - po otrzymaniu odpowiedzi przejdź na zakładkę `SSL Info`, aby wyświetlić certyfikat jakim serwer się przedstawił.
 
 <img src="../images/Lab3_34.png" width="70%">
-
-16. Możesz również wykonać test z wykorzystaniem OpenSSL:
-
-```
-echo | openssl s_client -showcerts -connect localhost:8080
-```
-
-<img src="../images/Lab3_36.png" width="70%">
