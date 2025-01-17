@@ -70,19 +70,19 @@
 
 5. Po zapisie automatycznie zostanie dodana nowa polityka o wartości `*/dev/*?Access=r+w+a+d+x` nadająca członkom tej grupy pełne uprawnienia do domeny `dev`. Zaaplikuj zmiany.
 
-<img src="../images/Lab3_16.png" width="70%">
+<img src="../images/Lab3_35.png" width="70%">
 
 6. Dodaj nową grupę o nazwie `grp-tst-full-all-r`. Dla nowej grupy pozostaw uprawnienia odczytu dla wszystkich obiektów oraz nadaj pełne uprawnienia do domeny `tst`. Zaaplikuj i zapisz zmiany.
 
-<img src="../images/Lab3_17.png" width="70%">
+<img src="../images/Lab3_16.png" width="70%">
 
 7. W następnym kroku założysz dwóch nowych użytkowników i przypiszesz im utworzone grupy. Wejdź w `User Account` i dodaj pierwszego użytkownika o nazwie `userdev`, ustaw hasło, wybierz opcję `Suppress initial…`, aby nie musieć zmieniać hasła przy pierwszym logowaniu i na koniec ustawić grupę `grp-dev-full`.
 
-<img src="../images/Lab3_18.png" width="70%">
+<img src="../images/Lab3_17.png" width="70%">
 
 8. Dodaj drugiego użytkownika o nazwie `usertst` przypisując do grupy `grp-tst-full-all-r`.
 
-<img src="../images/Lab3_19.png" width="70%">
+<img src="../images/Lab3_18.png" width="70%">
 
 9. Wyloguj się i spróbuj zalogować się na użytkownika userdev do domeny `default`. Próba logowania zakończy się niepowodzeniem, ponieważ grupa do której przypisany jest użytkownik ma wyłącznie uprawnienia tylko do domeny `dev`.
 
@@ -94,7 +94,7 @@
 
 11. Zaloguj się użytkownikiem `usertst` do domeny `default`. Ponieważ grupa, do której należy użytkownika `usertst` ma uprawienia odczytu do wszystkich obiektów w każdej domenie, to logowanie będzie pomyślne. Również dostępna jest opcja zmiany domeny.
 
-<img src="../images/Lab3_21.png" width="70%">
+<img src="../images/Lab3_22.png" width="70%">
 
 ## Zarządzanie certyfikatami oraz konfiguracja połączeń TLS
 
@@ -112,7 +112,7 @@ Tym razem wszystkie działania będą wykonywane w kontekście użytkownika `use
 1. Zaloguj się na użytkownika `userdev` do domeny `dev`, a następnie z menu wybierz `Crypto Tools` w `Administration -> Miscellaneous`.
 2. Wygeneruj nowy certyfikat podając w polu `Country Name` wartość `PL` oraz w `Common Name` wartość `dev.foo.bar`. Wygeneruj certyfikat klikając `Generate Key`.
 
-<img src="../images/Lab3_22.png" width="70%">
+<img src="../images/Lab3_19.png" width="70%">
 
 3. Potwierdź generowanie kluczy i certyfikatu do podpisu (CSR).
 
@@ -178,3 +178,5 @@ Z głównego menu uruchomić zarządzanie plikami i sprawdzić szczegóły certy
 ```
 echo | openssl s_client -showcerts -connect localhost:8080
 ```
+
+<img src="../images/Lab3_36.png" width="70%">
