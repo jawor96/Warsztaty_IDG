@@ -70,62 +70,58 @@ Password: P@ssw0rd!
 
 <img src="../images/Lab4_10.png" width="70%">
 
-10. W ostanim oknie `Should the user be restricted to a domain? (deprecated)` wybierz przycisk `Yes`.
-
-<img src="../images/Lab4_11.png" width="70%">
-
-11. Zapisz wprowadzone zmiany wybierając `Save Configuration` w prawym górnym rogu.
-12. Przejdź do nowo utworzonej domeny `backup-test` wybierając jej nazwę z listy dostępnych domen.
+10. Zapisz wprowadzone zmiany wybierając `Save Configuration` w prawym górnym rogu.
+11. Przejdź do nowo utworzonej domeny `backup-test` wybierając jej nazwę z listy dostępnych domen.
 
 <img src="../images/Lab4_12.png" width="70%">
 
-13. W celu utworzenia nowego przykładowego certyfikatu SSL w ramach danej domeny w wyszukiwarce wpisz: `Crypto Key` i wybierz tą opcję, w otwarty oknie `Configure Crypto Certificate` wybierz przycisk `Add`.
+12. W celu utworzenia nowego przykładowego certyfikatu SSL w ramach danej domeny w wyszukiwarce wpisz: `Crypto Key` i wybierz tą opcję, w otwarty oknie `Configure Crypto Certificate` wybierz przycisk `Add`.
 
 <img src="../images/Lab4_13.png" width="70%">
 
-14. W polu `Name` wprowadź nazwę certyfikatu: `example.com.crt`, następnie wybierz przycisk `Upload`.
+13. W polu `Name` wprowadź nazwę certyfikatu: `example.com.crt`, następnie wybierz przycisk `Upload`.
 
 <img src="../images/Lab4_14.png" width="70%">
 
-15. W otwartym oknie wgrywania plików wykorzystując przycisk `Browse` wskaż plik certyfikatu `C:\DataPowerAdminTraining\Lab5\example.com.crt` i wybierz przycisk `Upload`.
+14. W otwartym oknie wgrywania plików wykorzystując przycisk `Browse` wskaż plik certyfikatu `C:\DataPowerAdminTraining\Lab5\example.com.crt` i wybierz przycisk `Upload`.
 
 <img src="../images/Lab4_15.png" width="30%">
 
-16. Następnie kliknij `Continue`.
+15. Następnie kliknij `Continue`.
 
 <img src="../images/Lab4_16.png" width="40%">
 
-17. Po powrocie do okna `Crypto Certificate` wybierz przycisk `Apply`. W celu utworzenia nowego przykładowego klucza SSL w ramach danej domeny w wyszukiwarce wpisz: `Crypto Key` i wybierz tą opcję, w otwarty oknie `Configure Crypto Key` wybierz przycisk `Add`.
+16. Po powrocie do okna `Crypto Certificate` wybierz przycisk `Apply`. W celu utworzenia nowego przykładowego klucza SSL w ramach danej domeny w wyszukiwarce wpisz: `Crypto Key` i wybierz tą opcję, w otwarty oknie `Configure Crypto Key` wybierz przycisk `Add`.
 
 <img src="../images/Lab4_17.png" width="70%">
 
-18. W polu `Name` wprowadź nazwę certyfikatu: `example.com.key`, następnie wybierz przycisk `Upload`.
+17. W polu `Name` wprowadź nazwę certyfikatu: `example.com.key`, następnie wybierz przycisk `Upload`.
 
 <img src="../images/Lab4_18.png" width="70%">
 
-19. W otwartym oknie wgrywania plików wykorzystując przycisk `Browse` wskaż plik certyfikatu `C:\DataPowerAdminTraining\Lab5\example.com.key` i wybierz przycisk `Upload`.
+18. W otwartym oknie wgrywania plików wykorzystując przycisk `Browse` wskaż plik certyfikatu `C:\DataPowerAdminTraining\Lab5\example.com.key` i wybierz przycisk `Upload`.
 
 <img src="../images/Lab4_19.png" width="70%">
 
-20. Następnie kliknij `Continue`.
+19. Następnie kliknij `Continue`.
 
 <img src="../images/Lab4_20.png" width="70%">
 
-21. Po powrocie do okna `Crypto Certificate` wybierz przycisk `Apply`.
+20. Po powrocie do okna `Crypto Certificate` wybierz przycisk `Apply`.
 
 <img src="../images/Lab4_21.png" width="70%">
 
-22. Zapisz wprowadzone zmiany wybierając `Save Configuration` w prawym górnym rogu.
+21. Zapisz wprowadzone zmiany wybierając `Save Configuration` w prawym górnym rogu.
 
 ## Uwagi ogólne dotyczące wykonywania kopii
 
--	Importowanie danych z wyższej wersji głównej oprogramowania do niższej nie jest wspierane
--	Zmiana wyeksportowanych plików konfiguracyjnych nie jest objęta wsparciem
--	Należy upewnić się, że wykonując kopie bezpieczeństwa jesteśmy zalogowani na użytkownika posiadającego odpowiednie uprawnienia. Jeśli wykonujemy kopie jako inny użytkownik niż główny administrator, może się okazać, że jedynie podzbiór ustawień konfiguracyjnych jest dla niego dostępny
--	Należy ustalić czy wykonanie kopii plików znajdujących się na RAID urządzenia jest konieczne - tworzenie kopii zapasowej macierzy RAID będzie wymagało więcej miejsca i przetwarzania na urządzeniu
+-	Importowanie danych z wyższej wersji głównej oprogramowania do niższej nie jest wspierane.
+-	Zmiana wyeksportowanych plików konfiguracyjnych nie jest objęta wsparciem.
+-	Należy upewnić się, że wykonując kopie bezpieczeństwa jesteśmy zalogowani na użytkownika posiadającego odpowiednie uprawnienia. Jeśli wykonujemy kopie jako inny użytkownik niż główny administrator, może się okazać, że jedynie podzbiór ustawień konfiguracyjnych jest dla niego dostępny.
+-	Należy ustalić, czy wykonanie kopii plików znajdujących się na RAID urządzenia jest konieczne - tworzenie kopii zapasowej macierzy RAID będzie wymagało więcej miejsca i przetwarzania na urządzeniu
 -	Na środowiskach nieprodukcyjnych zaleca się odizolowanie urządzenia od normalnego ruchu (w trakcie wykonania kopii czy eksportu konfiguracji usługi urządzenia nie powinny być wywoływane).
 -	Należy się upewnić, że w danym momencie czasu inny użytkownik nie zmienia konfiguracji urządzenia. 
--	Zalecane jest usunięcie zbędnych plików z położeń: local, store, logstore. Pliki te niepotrzebne zwiększyć rozmiar kopii
+-	Zalecane jest usunięcie zbędnych plików z położeń: `local`, `store`, `logstore`. Pliki te niepotrzebne mogą zwiększyć rozmiar kopii.
 
 ## Utworzenie pełnej kopii urządzenia: Secure Backup
 
@@ -167,7 +163,7 @@ Pamiętaj, że wykonanie bezpiecznej kopii wymaga podania certyfikatu, który ko
 
 <img src="../images/Lab4_30.png" width="40%">
 
-10. Na koniec po wyświetleniu informacji **Action completed successfully** zamknij okno wybierając `Close.
+10. Na koniec po wyświetleniu informacji **Action completed successfully** zamknij okno wybierając `Close`.
 
 <img src="../images/Lab4_31.png" width="40%">
 
@@ -243,7 +239,7 @@ Postaraj się ustalić jaki jest status przywrócenia następujących elementów
 -	Domeny `backup-test`, czy widać ją ponownie na liście domen?
 -	Konta użytkownika `test-user` w tym celu w domenie default w polu wyszukiwania wpisz `User Account` i wybierz tę opcję - sprawdź czy przywrócił się użytkownik `test-user`
 -	Certyfikatów w tym celu w domenie `backup-test` w polu wyszukiwania wpisz `Crypto Certificate` i wybierz tę opcję - jaki jest status certikatów i z czego on wynika?
--	Kluczy tym celu w domenie backup-test w polu wyszukiwania wpisz Crypto Key i wybierz tę opcję - jaki jest status kluczy i z czego on wynika?
+-	Kluczy tym celu w domenie backup-test w polu wyszukiwania wpisz `Crypto Key` i wybierz tę opcję - jaki jest status kluczy i z czego on wynika?
 -	Plików certyfikatów i kluczy w tym celu w polu wyszukiwania wpisz `File Management`, a następnie wybierz tą opcję i sprawdź w wyszukiwarce plików zawartość katalogu `cert`.
 
 ## Przywrócenie pełnej kopii urządzenia: Secure Backup
