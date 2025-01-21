@@ -163,7 +163,7 @@ W tym ćwiczeniu zapoznamy się dostępnymi poziomami logowania i możliwościam
 
 <img src="../images/Lab5_34.png" width="70%">
 
-6. W otwartym oknie `Log Targe` w polu **Name** wpisz `XMLLogTarget`, z listy **Target Type** wybierz `SOAP`, z listy **Log Format** wybierz `XML`, w polu **URl** wpisz `http://adresIP:3223` gdzie adresIP to uprzednio ustalony adres bramy, na koniec przejdź na zakładkę `Event Subscription`.
+6. W otwartym oknie `Log Target` w polu **Name** wpisz `XMLLogTarget`, z listy **Target Type** wybierz `SOAP`, z listy **Log Format** wybierz `XML`, w polu **URl** wpisz `http://adresIP:3223`, gdzie adresIP to uprzednio ustalony adres bramy, na koniec przejdź na zakładkę `Event Subscription`.
 
 <img src="../images/Lab5_35.png" width="70%">
 
@@ -184,5 +184,110 @@ W tym ćwiczeniu zapoznamy się dostępnymi poziomami logowania i możliwościam
 
 ## Raportowanie błędów 
 
+W tym ćwiczeniu nauczysz się mechanizmów zbierania raportów błędów w celu ich zgłoszenia do obsługi wsparcia IBM.
+
+1. Aby przygotować raport błędów dla działu wsparcia firmy IBM w polu wyszukiwania wpisz `Troubleshooting` i wybierz tą opcję, następnie w sekcji **Raporting** wybierz `Generate Error Raport`. Zwróć uwagę, że istnieje możliwość wysłania raportu przy użyciu protokołu SMTP
+
 <img src="../images/Lab5_39.png" width="70%">
+
+2. W oknie **Execute Action** wybierz `Confirm`.
+
+<img src="../images/Lab5_40.png" width="40%">
+
+3. Po wyświetleniu akcji **Action completed successfully** wybierz `Close`.
+
+<img src="../images/Lab5_41.png" width="70%">
+
+4. Następnie skorzystaj z odnośnika `View Error Raport` umieszczone w sekcji **Reporting**.  Zapisz plik z raportem błędu na komputerze.
+
+<img src="../images/Lab5_42.png" width="70%">
+
+5. Wyświetl zawartość pobranego pliku z raportem błędu - zwróć uwagę na jego format.
+
+## Narzędzia do przeprowadzania diagnostyki sieci (PING, Connection Test, Przechwytywanie pakietów, Probes)
+
+W tym ćwiczeniu zapoznasz się z dostępnymi narzędziami pozwalającymi na diagnostykę i analizę połączeń sieciowych i działania usług.
+
+1. W celu skorzystania z narzędzia **Ping** w polu wyszukiwania wpisz `Troubleshooting` i wybierz tą opcję, następnie w sekcji **Networking Ping** **Remote Remote Host** wpisz adresIP twojej bramy
+
+<img src="../images/Lab5_43.png" width="70%">
+
+2. W otwartym oknie **Execute Action** wybierz `Confitrm`. Na koniec wybierz `Close`.
+
+<img src="../images/Lab5_44.png" width="50%">
+
+3. Powtórz test zmieniając ostatni oktet adresu IP na losową liczbę inną niż wpisana dotychczas, aby zaobserwować błąd.
+4. Następnie w sekcji **Networking TCP Connection Test Remote Host** wpisz adresIP Twojej bramy, w polu port wpisz `3223`, na koniec wybierz przycisk `TCP Connection Test`.
+
+<img src="../images/Lab5_45.png" width="70%">
+
+5. W otwartym oknie **Execute Action** wybierz `Confitrm`. Na koniec wybierz `Close`.
+
+<img src="../images/Lab5_46.png" width="70%">
+
+6. Powtórz test zmieniając numer portu np. na `3224`, aby zaobserwować nieudane połączenie.
+7. Zdefiniujesz czujkę (ang. Probe) na skonfigurowanym uprzednio serwisie, aby móc obserwować transakcje jakie obsługiwane są przez daną usługę.  W tum celu przejdź na zakładkę **Probe** i odnajdź zdefiniowany uprzednio serwis `LoopBackXMLService` i wybierz umieszczony obok niego przycisk `Add Probe`.
+
+<img src="../images/Lab5_47.png" width="70%">
+
+8. W otwartym oknie **Action Completed successfully** wybierz przycisk `Close`.
+
+<img src="../images/Lab5_48.png" width="70%">
+
+Zwróć uwagę, że na górze interfejsu pojawi się dodatkowe ostrzeżenie: Probe is enabled, which impacts performance. Czujki powinny być deaktywowane po zakończeniu testowania.
+
+9. Teraz przejdź do wygenerowania zrzutu pakietów przy użyciu narzędzi do przechwytywania pakietów. W tym celu musimy przejść do domeny default wybierając jej nazwę w prawym górnym rogu ekranu
+
+<img src="../images/Lab5_49.png" width="50%">
+
+10. W celu skorzystania z narzędzia **PCAP** w polu wyszukiwania wpisz `Troubleshooting` i wybierz tą opcję, następnie w sekcji **Packet Capture** wybierz w polu **Interface Type**: `Ethernet Interface`, w polu **Interface Name**: `eth0`, w polu **Mode** wybierz `Continious`, na koniec wybierz `Start Packet Capture`.
+
+<img src="../images/Lab5_50.png" width="70%">
+
+11. W otwartym oknie **Execute Action** wybierz `Confirm`.
+
+<img src="../images/Lab5_51.png" width="60%">
+
+12. Następnie wybierz `Close`.
+13. Wygenerujemsz teraz **Testowe Zdarzenie Logowania**, które powinno być przesłane do naszego serwisu. W tym celu przejdź do domeny `administration-debug`, wybierając jej nazwę w prawym górnym rogu platformy. 
+14. W polu wyszukiwania wpisz `Troubleshooting` i wybierz tą opcję, a następnie w sekcji **Logging Generate Log Event** z listy **Log Category** wybierz `mgmt`, z **Log Level** wybierz `Error`, w polu **Log Massage** wpisz `This is TEST!!!`  na koniec wybierz przycisk `Generate Log Event`.
+
+<img src="../images/Lab5_52.png" width="70%">
+
+15. W otwartym oknie **Execute Action** wybierz `Confirm`.P o wykonaniu testu wybierz `Close`.
+
+<img src="../images/Lab5_53.png" width="70%">
+
+16. Przejdź do zakładki **Probes**, następnie odnajdź swoją czujkę wyświetloną obok serwisu `LoobBackXMLService` i wybierz ikonę **Lupy** aby wyświetlić transakcje.
+
+<img src="../images/Lab5_54.png" width="70%">
+
+17. W otwartym oknie powinieneś widzieć połączenia z serwisem. Jeśli w Twoim przypadku lista jest pusta skorzystaj z przycisku **Refresh**. Jeśli nadal nic nie widzisz być może popełniłeś literówkę w konfiguracji serwisu lub źródła logowania. Sprawdź logi w razie wątpliwości poproś o pomoc prowadzącego.
+18. Zwróć uwagę, że na liście widać adres URL wchodzący i wychodzący, regułę która przepuściła połączenie i adres klienta. Wybierz ikonę **lupy** umieszczoną obok połączenia, aby uzyskać dostęp do szczegółów danego połączenia.
+
+
+<img src="../images/Lab5_55.png" width="70%">
+
+19. W otwartym oknie danego połączenia zwróć uwagę, że masz dostęp do szeregu szczegółowych informacji takich jak np. **Nagłówki Żądania**.
+
+<img src="../images/Lab5_56.png" width="70%">
+
+20. Teraz zatrzymaj czujkę wybierając przycisk `Disable` umieszczony obok naszego serwisu **LooopBackXMLService**. 
+
+<img src="../images/Lab5_57.png" width="70%">
+
+21. W otwarym oknie **Action complited successfully!** wybieramy przycisk `Close.`.
+
+<img src="../images/Lab5_58.png" width="70%">
+
+22. Zatrzymasz też przechwytywanie pakietów w tym celu musimy przejść do domeny `default` wybierając jej nazwę w prawym górnym rogu ekranu.
+23. W celu zatrzymania przechwytywania pakietów polu wyszukiwania wpisz `Troubleshooting` i wybierz tą opcję, następnie w sekcji  **Packet Capture Stop Packet Capture** wybierz w polu **Interface Type**: `Ethernet Interface`, w polu **Interface Name**: `eth0`,  na koniec wybierz `StopPacket Capture`.
+
+<img src="../images/Lab5_59.png" width="70%">
+
+24. Plik może zostać pobrany bezpośrednio z linku w sekcji przechowywania lub z sytemu plików DPG. Aby pobrać plik ze zrzutem pakietów z systemu plików w polu wyszukiwania wpisz `File Management` i wybierz tą opcje, następnie w eksploratorze plików wybierz katalog `Temporary` i wskaż plik `capture.pcap.001`. Zapisz plik na lokalnym komputerze.
+
+<img src="../images/Lab5_60.png" width="70%">
+
+25. Plik ten można poddać analizie np. w programie WireShark. Program WireShark powinien być dostępny na stacjach. Aby załadować plik wskaż go wykorzystają opcję `Plik -> Otwórz (File -> Open)`. W Filtrze możesz być zmuszony wybrać `All-Files`. Możesz też zmienić rozszerzenie pliku na `*.pcap`. Możesz poeksperymentować z wyszukiwaniem danych korzystając z różnych filtrów, program będzie je podpowiadał np: `tcp.port == 9090` lub `tcp.port == 3223`.
 
