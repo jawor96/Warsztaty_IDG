@@ -28,7 +28,7 @@ Password: P@ssw0rd!
 
 8. W wyświetlonych danych wyszukaj wpisu `backup mode: secure`.
 
-Tryb bezpiecznego backupu możliwy jest do ustawienia podczas inicjalizacji DPG. Jesli tryb ten nie byłby dostępny, wymagana byłaby reinicjalizacja użądządzenia, co doprowdziłoby do utraty danych.
+Tryb bezpiecznego backupu możliwy jest do ustawienia podczas inicjalizacji DPG. Jesli tryb ten nie byłby dostępny, wymagana byłaby reinicjalizacja urządządzenia, co doprowdziłoby do utraty danych.
 
 ## Procedura wstępna - utworzenie przykładowej konfiguracji
 
@@ -206,20 +206,16 @@ W tym ćwiczeniu usuniesz domenę, użytkownika oraz certyfikaty.
 <img src="../images/Lab4_37.png" width="60%">
 
 3. Potwierdź kasowanie wybierając przycisk `OK`.
-4. Następnie w wyszukiwarce wpisz: `File Management` i wybierz tą opcję. W przeglądarce plików rozwiń `cert` i zaznacz plik certyfikatu `example.com.crt` na końcu wybierz `Delete`.
-
-<img src="../images/Lab4_38.png" width="70%">
-
-5. W celu skasowania uprzednio utworzonego użytkownika w wyszukiwarce wpisz: `User Account` i  wybierz tą opcję, następnie wybierz nazwę użytkownika `test-user`.
+4. W celu skasowania uprzednio utworzonego użytkownika w wyszukiwarce wpisz: `User Account` i  wybierz tą opcję, następnie wybierz nazwę użytkownika `test-user`.
 
 <img src="../images/Lab4_39.png" width="70%">
 
-6. Po wyświetleniu szczegółów użytkownika wybierz przycisk `Delete`.
+5. Po wyświetleniu szczegółów użytkownika wybierz przycisk `Delete`.
 
 <img src="../images/Lab4_40.png" width="70%">
 
-7. Potwierdź usunięcie użytkownika wciskając przycisk `OK`.
-8. Zapisz wprowadzone zmiany wybierając `Save Configuration` w prawym górnym rogu.
+6. Potwierdź usunięcie użytkownika wciskając przycisk `OK`.
+7. Zapisz wprowadzone zmiany wybierając `Save Configuration` w prawym górnym rogu.
 
 ## Przywrócenie kopii wybranej konfiguracji IDG
 

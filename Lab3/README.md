@@ -14,7 +14,7 @@
 
 <img src="../images/Lab3_02.png" width="70%">
 
-4. Wróć do głównego ekranu i wejdź w zarządzanie plikami (`File Management`).
+4. Wróć do głównego ekranu i wejdź w zarządzanie plikami (`File Management`). Zróć uwagę na dostępne foldery i ich zawartość.
 
 <img src="../images/Lab3_03.png" width="70%">
 
@@ -52,7 +52,7 @@
 
 ## Tworzenie i zarządzanie użytkownikami w IDG
 
-1. Z menu wybierz `RBM settings` znajdujące się w `Administration -> Access`. Przejrzyj dostępne opcje w dostępnych zakładkach niczego nie modyfikując.
+1. Przełącz się na domenę `default`. Z menu wybierz `RBM settings` znajdujące się w `Administration -> Access`. Przejrzyj dostępne opcje w dostępnych zakładkach niczego nie modyfikując.
 
 <img src="../images/Lab3_12.png" width="70%">
 
