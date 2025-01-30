@@ -19,7 +19,7 @@ Podstawowe usługi dostępne w ramach DataPower Gateway to:
   <thead>
     <tr>
       <th> XML Firewall — zabezpiecza i odciąża przetwarzanie XML z wewnętrznych aplikacji (back-end) opartych na XML. Obsługuje im. Filtrowanie ruchu, walidacja i weryfikacja danych, kontrola dostępu, wirtualizacja usługi, kryptografia na poziomie wiadomości i pola.</th>
-      <th rowspan="3"> <img src="../images/Lab6_02.png" width="50%"> </th>
+      <th rowspan="4"> <img src="../images/Lab6_02.png" width="100%"> </th>
     </tr>
     <tr>
       <th> Multi-Protocol Gateway (MPGW) — odbiera komunikaty od klientów korzystających z różnych protokołów komunikacyjnych i wysyła komunikaty do usług back-end’owych za pośrednictwem różnych protokołów. Dodatkowo obsługuje funkcje podobne do XML Firewall. </th>
@@ -27,8 +27,33 @@ Podstawowe usługi dostępne w ramach DataPower Gateway to:
     <tr>
       <th> Web Service Proxy (WS-Proxy) — wirtualizuje i zabezpiecza aplikacje back-end’owe usług internetowych. Dodatkowo obsługuje funkcje podobne do XML Firewall.</th>
     </tr>
+    <tr>
+      <th> Web Application Firewall (WAFW) — zabezpiecza i odciąża przetwarzanie aplikacji internetowych. Obsługuje mi. mediację zagrożeń, AAA i weryfikacje internetowa.</th>
+    </tr>
   </thead>
 </table>
+
+## Dostęp do plików i katalogów na laptopie
+
+Wszystkie pliki wymagane do wykonania tego ćwiczenia znajdują się w następującym folderze lokalnym:
+
+`C:\DataPowerAdminTraining\Lab6`
+
+## Usługa Web Service Proxy
+
+Celem tego ćwiczenia jest poznanie usługi WS-Proxy oraz podstawowa konfiguracja następujących funkcji:
+- SLM Policy
+- AAA Policy
+- Ochrona przed atakiem SQL Injection
+
+### Podstawowa konfiguracja usługi WS-Proxy
+
+Aby skonfigurować WS-Proxy będzie Ci potrzebny dokument WSDL, który opisuje usługę internetowa z wykorzystaniem XML.
+
+> [!NOTE]
+> Dokument WSDL to opis usługi internetowej, definiujący metody, parametry, formaty danych i protokoły komunikacyjne. Umożliwia klientom interakcję z usługą bez znajomości jej wewnętrznej implementacji, dzięki czemu usprawnia tworzenie rozproszonych systemów opartych na usługach (SOA).
+
+1. Dokument WSDL potrzebny do zajęć znajdziecie w folderze `C:\DataPowerAdminTraining\Lab6\WS-Proxy\dataflex.wsdl`
 
 
 
