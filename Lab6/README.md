@@ -134,7 +134,9 @@ W kolejnym kroku skonfigurujesz politykę SLM, która ogranicza ilość wysyłan
 > - Zapewnia monitorowanie na różnym poziomie usługi.
 > - Kontrolowanie ruch przychodzący do WS-Proxy za pomocą akcji Notify, Throttle oraz Shape.
 > - Wyświetlanie wykresu, aby zobaczyć ruch sieciowy na danym poziomie.
+>
 > W obszarze Request możesz policzyć liczbę transakcji występujących w określonym przedziale czasu (w sekundach). W przypadku przekroczenia limitu transakcji możesz określić następujące akcję:
+>
 > - **Notify**: Generuje komunikat do logu w przypadku przekroczenia limitu transakcji.
 > - **Throttle**: Wszystkie transakcje powyżej limitu są odrzucane i generowane są komunikat do logu.
 > - **Shape**: Pierwsze 2500 transakcji przekraczających limit transakcji trafia do kolejki do późniejszej transmisji, a kolejne transakcje przekraczające limit 2500 są odrzucane. Generowane są komunikat do logu.

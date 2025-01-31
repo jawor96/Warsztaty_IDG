@@ -11,7 +11,7 @@ Skonfigurowane laptopy przekazane przez trenerów.
 3. [Lab3 - Zarządzanie IDG](https://github.com/jawor96/Warsztaty_IDG/tree/main/Lab3)
 4. [Lab4 - Narzędzia administracyjne i trobleshooting IDG](https://github.com/jawor96/Warsztaty_IDG/tree/main/Lab4)
 5. [Lab5 - Kopia, Eksport, Import](https://github.com/jawor96/Warsztaty_IDG/tree/main/Lab5)
-6. Lab6 - Usługa Multi-Protocol Gateway IDG
+6. [Lab6 - Usługa Multi-Protocol Gateway IDG](https://github.com/jawor96/Warsztaty_IDG/tree/main/Lab6)
 7. Lab7 - Usługa WS-Proxy IDG
 
 ## Agenda
