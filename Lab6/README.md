@@ -134,11 +134,10 @@ W kolejnym kroku skonfigurujesz politykę SLM, która ogranicza ilość wysyłan
 > - Zapewnia monitorowanie na różnym poziomie usługi.
 > - Kontrolowanie ruch przychodzący do WS-Proxy za pomocą akcji Notify, Throttle oraz Shape.
 > - Wyświetlanie wykresu, aby zobaczyć ruch sieciowy na danym poziomie.
-
 > W obszarze Request możesz policzyć liczbę transakcji występujących w określonym przedziale czasu (w sekundach). W przypadku przekroczenia limitu transakcji możesz określić następujące akcję:
-> - Notify: Generuje komunikat do logu w przypadku przekroczenia limitu transakcji.
-> - Throttle: Wszystkie transakcje powyżej limitu są odrzucane i generowane są komunikat do logu.
-> - Shape: Pierwsze 2500 transakcji przekraczających limit transakcji trafia do kolejki do późniejszej transmisji, a kolejne transakcje przekraczające limit 2500 są odrzucane. Generowane są komunikat do logu.
+> - **Notify**: Generuje komunikat do logu w przypadku przekroczenia limitu transakcji.
+> - **Throttle**: Wszystkie transakcje powyżej limitu są odrzucane i generowane są komunikat do logu.
+> - **Shape**: Pierwsze 2500 transakcji przekraczających limit transakcji trafia do kolejki do późniejszej transmisji, a kolejne transakcje przekraczające limit 2500 są odrzucane. Generowane są komunikat do logu.
 > W obszarze Failure możesz określić te same informacje, co Request, z tą różnicą, że te ustawienia dotyczą komunikatów o błędach.
 
 3. Rozwiń drzewo WSDL, aż do operacji **CapitalCity** (`proxy: DataFlex --> wsdl: dataflex.wsdl --> service: CountryInfoServiceSoap --> port-operation: CapitalCity`)
@@ -186,9 +185,9 @@ Następująca polityki pozwala wysłać 3 zapytania o stolicę kraju w ciągu 1 
 
 > [!NOTE]
 > AAA oznacza 3 procesy bezpieczeństwa:
-> 1.	Autentykacja (Uwierzytelnianie) weryfikuje tożsamość nadawcy zapytania.
-> 2.	Autoryzacja określa, czy klient ma dostęp do żądanego zasobu.
-> 3.	Audyt rejestruje wszelkie próby uzyskania dostępu do zasobów.
+> 1.	**Autentykacja** (Uwierzytelnianie) weryfikuje tożsamość nadawcy zapytania.
+> 2.	**Autoryzacja** określa, czy klient ma dostęp do żądanego zasobu.
+> 3.	**Audyt** rejestruje wszelkie próby uzyskania dostępu do zasobów.
 
 2. Aby zdefiniować politykę dla naszego WS-Proxy przejdź do zakładki **Proxy Settings**.
 3. Stwórz nową politykę AAA klikając znak `+` przy opcji `Authorization AAA Policy`.
@@ -278,12 +277,13 @@ Hasło: tonyf
 > - możliwością odczytania wybranych plików (system operacyjny, na którym pracuje baza danych),
 > - możliwością tworzenia plików w systemie operacyjnym, na którym pracuje baza,
 > - możliwością wykonania kodu w systemie operacyjnym (uprawnienia użytkownika, na którym pracuje baza lub web serwer – w przypadku aplikacji webowych).
+>
 > Źródło: https://sekurak.pl/czym-jest-sql-injection/
 
 1. DataPower pozwala zabezpieczyć usługi na wypadek ataku **SQL Injection**. W tym ćwiczeniu zaimplementujesz tą funkcjonalność dla jednej z operacji usługi WS-Proxy.
 
 > [!WARNING]  
-> Zanim przejdziemy do ćwiczenia, należy wyłączyć politykę AAA, aby sprawniej testować funkcjonalność. Aby to zrobić zmień w zakładce Proxy Settings politykę AAA na (none), a następnie klikjnij Apply oraz Save Configuration.
+> Zanim przejdziemy do ćwiczenia, należy wyłączyć politykę AAA, aby sprawniej testować funkcjonalność. Aby to zrobić zmień w zakładce **Proxy Settings** politykę AAA na (none), a następnie klikjnij `Apply` oraz `Save Configuration`.
 
 <img src="../images/Lab6_26.png" width="60%">
 
@@ -304,7 +304,7 @@ Hasło: tonyf
 <img src="../images/Lab6_29.png" width="70%">
 
 > [!NOTE]
-> Można stworzyć swój własny plik ze wzorami SQL, które chcemy filtrować. W tym celu można wykorzystać szablon dostępny w ramach DP z store:///SQL-Injection-Patterns.xml
+> Można stworzyć swój własny plik ze wzorami SQL, które chcemy filtrować. W tym celu można wykorzystać szablon dostępny w ramach DP z s`tore:///SQL-Injection-Patterns.xml`
 
 9. Wybierz odpowiedni plik, a następnie kliknij `Done`.
 10. Kliknij `Apply`, a następnie `Save Configuration`.
