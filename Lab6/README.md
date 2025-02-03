@@ -1,4 +1,4 @@
-# Usługa Multi-Protocol Gateway IDG
+# Usługa WS-Proxy IDG
 
 ## Podstawowe usługi DataPower
 
