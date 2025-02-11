@@ -17,9 +17,29 @@ Wszystkie pliki wymagane do wykonania tego ćwiczenia znajdują się w następuj
 
 `C:\DataPowerAdminTraining\Lab7`
 
+## Przygotowanie środowiska
+
+Zanim przejdziesz do ćwiczeń musisz jeszcze przygotować środowisko laboratoryje, importując dwie usługi backend.
+
+1. Zaloguj się, do domeny `default` korzystając z interfejsu WebGUI.
+2. Kliknij `Import Confguration` na ekranie głownym.
+
+<img src="../images/Lab7_46.png" width="70%">
+
+3. Upewnij się, że w polu From jest opcja `ZIP`, a następnie kliknij `Browse...` w polu `File`.
+4. Przejdz do folderu `C:\DataPowerAdminTraining\Lab7` i wybierz plik `BankMockService1.zip`.
+
+<img src="../images/Lab7_47.png" width="70%">
+
+5. Kliknij `Next`.
+6. Pozostwa ustawienia domyślne i kliknij `Import` oraz `Done`.
+7. Powtórz procedurę od 2 do 6 dla pliku o nazwie `BankMockService1.zip` znajdującego się w tym samym folderze.
+8. Kliknij `Save Configuration`.
+
+
 ## Podstawowa konfiguracja MPGW
 
-1. Przed rozpoczęciem ćwiczeń zmień domenę na `Developer`.
+1. Przed rozpoczęciem ćwiczeń zmień domenę na `dev` (lub `Developer`).
 2. Wybierze ikonę *Multi-Protocol Gateway* na panelu głównym WebGUI DataPower, a następnie kliknij `Add`, aby dodać nową usługę.
 3. Uzupałnij następujące dane:
 
@@ -28,11 +48,11 @@ Wszystkie pliki wymagane do wykonania tego ćwiczenia znajdują się w następuj
 - Typ zapytania (Request Type): `XML`
 - Typ odpowiedzi (Response Type): `XML`
 
-<img src="../images/Lab7_01.png" width="90%">
+<img src="../images/Lab7_01.png" width="70%">
 
 4. W kolejnym kroku skonfiguruj *Frond Side Protocol*, gdzie określisz lokalny adres IP i numer portu do nasłuchiwania zapytań. Kliknij znak `+`, a następnie wybierz `HTTP Handler`.
 
-<img src="../images/Lab7_02.png" width="70%">
+<img src="../images/Lab7_02.png" width="50%">
 
 5. Zmieniamy następujące pola konfiguracji FSH (pozostałe pozostawiamy bez zmian):
 
@@ -47,7 +67,7 @@ Ostatni parametr określa maksymalną ilość nagłówków w zapytaniu. Na póź
 
 6. Reszta konfiguracji pozostaje bez zmian. Konfiguracja FSH powinna wyglądać następująco:
 
-<img src="../images/Lab7_03.png" width="70%">
+<img src="../images/Lab7_03.png" width="50%">
 
 7. Kliknij `Apply`, aby zapisać wprowadzoną konfiguracje.
 8. W kolejnym kroku należy skonfigurować politykę przetwarzania, aby to zrobić kliknij ikonę `+` przy zakładce **Processing Policy**.
@@ -78,7 +98,7 @@ Następnie kliknij `New Rule` i zmień **Rule Direction**: `Client to Server`.
 
 <img src="../images/Lab7_08.png" width="70%">
 
-16. Aby zdefiniować, gdzie ma zostać przekazane zapytanie wykorzystamy XPath Expression, w tym celu zmień metodę na `Use XPath to Select Destination`, a następnie kliknij `+`, aby skonfigurować mapę routingu.
+16. Aby zdefiniować, gdzie ma zostać przekazane zapytanie wykorzystamy **XPath Expression**, w tym celu zmień metodę na `Use XPath to Select Destination`, a następnie kliknij `+`, aby skonfigurować mapę routingu.
 
 <img src="../images/Lab7_09.png" width="70%">
 
@@ -103,7 +123,7 @@ Następnie kliknij `New Rule` i zmień **Rule Direction**: `Client to Server`.
 
 23. Kliknij `Apply`.
 
-<img src="../images/Lab7_13.png" width="70%">
+<img src="../images/Lab7_13.png" width="50%">
 
 24. Dodaj następną regułę klikając `Add`.
 
@@ -144,7 +164,7 @@ Definicja reguły jak na obrazku:
 
 3. Wybierz zapytanie **BankServiceMPGW_Card**. Upewnij się, że adres IP zgadza się z adresem IDG, a następnie kliknij `Send`.
 
-<img src="../images/Lab7_20.png" width="70%">
+<img src="../images/Lab7_20.png" width="50%">
 
 4. Otrzymałeś odpowiedz od serwisu backend’owego odpowiedzialnego za przetwarzanie zapytań dt. płatności kartą. Kliknij na zapytanie `BankServiceMPGW_Netbanking`. Ponownie upewnij się, że adres IP zgadza się z adresem IDG, a następnie kliknij `Send`.
 
@@ -165,7 +185,7 @@ Na ten moment usługa zwraca nam komunikat w formacie serwisu backend’oweg ban
 
 1. Odpowiedź powinna być w formacie klienta. W tym celu zastosujesz regułę transformacji w ramach IDG oraz prosty plik transformacyjny napisany w XSLT – `Bank2Customer.xls`, który dostępny jest w folderze `C:/DataPowerAdminTraining/Lab7`. Transformacja wygląda następująco:
 
-<img src="../images/Lab7_24.png" width="70%">
+<img src="../images/Lab7_24.png" width="100%">
 
 2. Aby skonfigurować regułę wróć do WebGUI DP oraz usługi **MPGW_BankService**. Kliknij `…` przy polityce *BankService_Policy*, aby zmienić konfiguracje.
 3. Przejdź do reguły **Server to Client**, a następnie przeciągnij akcję `Transformacji` za akcją `Match`
@@ -196,7 +216,7 @@ Plik `BankServiceSchemaValidation.xsd`, który znajduje się w folderze `C:/Data
 - Kwota (**amount**) ma być typu `decimal`
 - Typ płatności (**paymentType**) ma być typu `string`
 
-<img src="../images/Lab7_28.png" width="70%">
+<img src="../images/Lab7_28.png" width="50%">
 
 1. Aby skonfigurować regułę wróć do WebGUI DP oraz usługi **MPGW_BankService**. Kliknij `…` przy polityce *BankService_Policy*, aby zmienić konfiguracje.
 2. Przejdź do reguły **Client to Server**, a następnie przeciągnij akcję `Walidacji` za akcją `Match`.
