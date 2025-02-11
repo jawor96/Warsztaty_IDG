@@ -18,7 +18,7 @@ Podstawowe usługi dostępne w ramach DataPower Gateway to:
 <table>
   <thead>
     <tr>
-      <th> XML Firewall — zabezpiecza i odciąża przetwarzanie XML z wewnętrznych aplikacji (back-end) opartych na XML. Obsługuje im. Filtrowanie ruchu, walidacja i weryfikacja danych, kontrola dostępu, wirtualizacja usługi, kryptografia na poziomie wiadomości i pola.</th>
+      <th> XML Firewall — zabezpiecza i odciąża przetwarzanie XML z wewnętrznych aplikacji (back-end) opartych na XML. Obsługuje między innymi Filtrowanie ruchu, walidacja i weryfikacja danych, kontrola dostępu, wirtualizacja usługi, kryptografia na poziomie wiadomości i pola.</th>
       <th rowspan="4"> <img src="../images/Lab6_02.png" width="100%"> </th>
     </tr>
     <tr>
@@ -28,7 +28,7 @@ Podstawowe usługi dostępne w ramach DataPower Gateway to:
       <th> Web Service Proxy (WS-Proxy) — wirtualizuje i zabezpiecza aplikacje back-end’owe usług internetowych. Dodatkowo obsługuje funkcje podobne do XML Firewall.</th>
     </tr>
     <tr>
-      <th> Web Application Firewall (WAFW) — zabezpiecza i odciąża przetwarzanie aplikacji internetowych. Obsługuje mi. mediację zagrożeń, AAA i weryfikacje internetowa.</th>
+      <th> Web Application Firewall (WAFW) — zabezpiecza i odciąża przetwarzanie aplikacji internetowych. Obsługuje między innymi mediację zagrożeń, AAA i weryfikacje internetowa.</th>
     </tr>
   </thead>
 </table>
@@ -53,9 +53,9 @@ Aby skonfigurować WS-Proxy będzie Ci potrzebny dokument WSDL, który opisuje u
 > [!NOTE]
 > Dokument WSDL to opis usługi internetowej, definiujący metody, parametry, formaty danych i protokoły komunikacyjne. Umożliwia klientom interakcję z usługą bez znajomości jej wewnętrznej implementacji, dzięki czemu usprawnia tworzenie rozproszonych systemów opartych na usługach (SOA).
 
-1. Dokument WSDL potrzebny do zajęć znajdziecie w folderze `C:\DataPowerAdminTraining\Lab6\WS-Proxy\dataflex.wsdl`
-2. W ramach ćwiczeń skorzystasz z ogólnodostępnej usługi internetowej **DataFlex**, która zwracania informacji dt. różnych krajów.
-3. Przed rozpoczęciem ćwiczeń zmień domenę na `Developer`.
+1. Dokument WSDL potrzebny do zajęć znajdziecie w folderze `C:\DataPowerAdminTraining\Lab6\dataflex.wsdl`
+2. W ramach ćwiczeń skorzystasz z ogólnodostępnej usługi internetowej [**DataFlex**](http://webservices.oorsprong.org/websamples.countryinfo/CountryInfoService.wso), która zwracania informacji dt. różnych krajów.
+3. Przed rozpoczęciem ćwiczeń zmień domenę na `dev`. Jeśli nie masz domeny `dev`, stwórz nową domenę o nazwie `Developer`.
 4. Wybierz ikonę **WS-Proxy** na panelu głównym WebGUI DataPower, a następnie kliknij `Add`, aby dodać nową usługę.
 5. Wprowadź nazwę usługi: `DataFlex`
 6. W kolejnym kroku załaduj dokument WSDL (`dataflex.wsdl`) dostępny w folderze zajęć, a następnie kliknij `Next`. Pozostaw resztę ustawień bez zmian.
@@ -94,7 +94,7 @@ Aby skonfigurować WS-Proxy będzie Ci potrzebny dokument WSDL, który opisuje u
 <img src="../images/Lab6_07.png" width="80%">
 
 15. Następnie kliknij `Next` (dolna część ekranu).
-16. Zapisz zmiany klikając Save Configuration (prawy górny róg).
+16. Zapisz zmiany klikając `Save Configuration` (prawy górny róg).
 
 Na ten moment mamy wstępnie skonfigurowaną usługę WS-Proxy dla serwisu DatFlex.
 
@@ -221,7 +221,7 @@ Następująca polityki pozwala wysłać 3 zapytania o stolicę kraju w ciągu 1 
 13. Następnie kliknij `Next`, `Commit` i na końcu `Done`.
 14. W ostatnim kroku kliknij `Apply`, aby potwierdzić konfigurację polityki.
 15. Aby zapisać wprowadzone zmiany kliknij `Apply` oraz `Save Configuration`.
-16. Pozostaje jeszcze skonfigurować monitor wystąpień (**Count Monitor**). W tym celu kliknij na zakładkę **Monitors**, a następnie wybieramy stworzony wcześniej `AAA_Policy_counter` i kliknij ikonę `...`, aby wprowadzić dodatkową konfigurację.
+16. Pozostaje jeszcze skonfigurować monitor wystąpień (**Count Monitor**). W tym celu kliknij na zakładkę **Monitors**, a następnie wybierz stworzony wcześniej `AAA_Policy_counter` i kliknij ikonę `...`, aby wprowadzić dodatkową konfigurację.
 
 <img src="../images/Lab6_18.png" width="70%">
 
@@ -306,7 +306,8 @@ Hasło: tonyf
 <img src="../images/Lab6_29.png" width="70%">
 
 > [!NOTE]
-> Można stworzyć swój własny plik ze wzorami SQL, które chcemy filtrować. W tym celu można wykorzystać szablon dostępny w ramach DP z s`tore:///SQL-Injection-Patterns.xml`
+> Można stworzyć swój własny plik ze wzorami SQL, które chcemy filtrować. W tym celu można wykorzystać szablon dostępny w ramach DP z ejbdccuunblgjubluhfgdngdrhirrcfebhtkruutjece
+`store:///SQL-Injection-Patterns.xml`
 
 9. Wybierz odpowiedni plik, a następnie kliknij `Done`.
 10. Kliknij `Apply`, a następnie `Save Configuration`.
