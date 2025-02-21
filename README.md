@@ -18,13 +18,15 @@ Skonfigurowane laptopy przekazane przez trenerów.
 
 ### Dzień 1.
 
+<img src="../images/Agenda1.png" width="60%">
 
 ### Dzień 2.
 
+<img src="../images/Agenda2.png" width="60%">
 
 ### Prezentacje
 
-[Prezentacje do pobrania](https://www.ibm.com/products/datapower-gateway).
+[Prezentacje do pobrania](https://github.com/jawor96/Warsztaty_IDG/tree/main/Prezentacje).
 
 ### Kontakt
 

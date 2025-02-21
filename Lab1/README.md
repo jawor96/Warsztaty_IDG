@@ -10,99 +10,11 @@ Istnieją trzy podstawowe wersje obrazów VMWare bramy DataPower, które można 
 
 Powyższe wersje różnią się od siebie **sposobem licencjonowania**, a także **modułami dodatkowymi**, które w wersji „for Developers” są dostępne i aktywowane, a w wersji Non-Production & Production mogą wymagać włączenia i aktywowania. Pełna lista modułów w zależności od wersji znajduje się pod tym [linkiem w dokumentacji IBM](https://www.ibm.com/docs/en/datapower-gateway/10.5.x?topic=management-available-modules-by-product).
 
-## Dostęp do plików i katalogów na laptopie
-
-Wszystkie pliki wymagane do wykonania tego ćwiczenia znajdują się w następującym folderze lokalnym:
-
-    C:\DataPowerAdminTraining\Lab1
-
-W powyższym folderze znajduje się obraz bramy DataPower (plik: `idg10502.ova`) oraz narzędzie `ovftool`, które służy do rozpakowywania plików `ova` oraz `ovf` wprost do postaci maszyn wirtualnych. 
-
-## Rozpakowanie obrazu maszyny wirtualnej DataPower
-
-1. Aby rozpocząć należy otworzyć terminal i wykonać serię komend jak poniżej:
-
-<img src="../images/Lab1_01.png" width="70%">
-
-```
-cd C:\DataPowerAdminTraining\Lab1
-
-ovftool\ovftool.exe idg10502.ova datapower-vm
-```
-
-Narzędzie `ofvtool` rozpocznie proces rozpakowywania pliku `ova`, a wynik zapisze w katalogu `datapower-vm`.
-
-2. W pierwszym kroku procesu należy zaakceptować licencje, wspisując `yes`.
-
-<img src="../images/Lab1_02.png" width="50%">
-
-Po akceptacji licencji rozpocznie się proces rozpakowywania dysków który potrwa kilka (lub kilkanaście) sekund. Ostatecznie powinniśmy uzystkać następujący rezultat:
-
-<img src="../images/Lab1_03.png" width="50%">
-
-Powinien zostać utworzony nowy katalog `datapower-vm`, a w nim pliki maszyny wirtualnej.
-
-<img src="../images/Lab1_04.png" width="50%">
-
-## Import plików maszyny wirtualnej do VMWare Workstation
-
-1. Uruchamiamy aplikację `VMWare Workstation Pro` korzystając ze skrótku na pulpicie.
-
-<img src="../images/Lab1_05.png" width="15%">
-
-2. Wybierz opcję `Open a Virtual Machine` i wskaż na katalog: `C:\DataPowerAdminTraining\Lab1\datapower-vm\idg10502.lts.nonprod`, a następnie `idg10502.lts.nonprod.vmx`.
-
-<img src="../images/Lab1_07.png" width="50%">
-
-<img src="../images/Lab1_08.png" width="50%">
-
-3. Po chwili maszyna powinna pojawić się w aplikacji VMWare Workstation. Zanim zostanie włączona należy jeszcze wykonać dwa kroki:
-
-- Migrację obrazu do wersji VMware 12.
-- Zmianę parametrów maszyny wirtualnej – m.in ilości rdzeni przydzielonych do maszyny.
-
-<img src="../images/Lab1_09.png" width="30%">
-
-4. Z menu należy wybrać następującą opcję: `VM -> Manage -> Change Hardware Compability`
-
-<img src="../images/Lab1_10.png" width="40%">
-
-5. Należy wcisnąć przycisk `Next` i przejść do następnego ekranu:
-
-<img src="../images/Lab1_11.png" width="40%">
-
-6. Na kolejnym ekranie należy zmienić domyślną opcję i zaznaczyć: `Alter this virtual machine`
-
-<img src="../images/Lab1_12.png" width="40%">
-
-7. Po kolejnym wciśnięciu przycisku `Next` należy potwierdzić chęć migracji przyciskiem `Finish`.
-
-<img src="../images/Lab1_13.png" width="30%">
-
-8. Po imporcie maszyny do środowiska VMWare, należy zmienić podstawowe parametr maszyny wirtualnej czyli np. ilość procesorów i rdzeni, a także rodzaj karty sieciowej. Laptop na którym wykonujemy ćwiczenia pozwala na uruchomienie maszyn wirtualnych z maksymalnie 4 rdzeniami.
-
-<img src="../images/Lab1_14.png" width="30%">
-
-9. Na ekranie edycji parametrów maszyny wirtualnej zaznaczamy ilość procesorów i rdzeni:
-
-```
-Number of processors: 1
-Number of cores per processor: 4
-```
-
-10. Dodatkowo, należy zmienić tryb połączenia pierwszej karty sieciowej: `Network Adapter` z domyślnej wartości `Bridged (Automatic)` na `NAT`
-
-<img src="../images/Lab1_16.png" width="50%">
-
-11. Należy zatwierdzić zmianę wciskając przycisk `OK`.
-
-Ostatecznie, konfiguracja powinna wyglądać następująco:
-
-<img src="../images/Lab1_17.png" width="30%">
-
 ## Pierwsze uruchomienie maszyny DataPower Gateway
 
-1. W tej chwili maszyna wirtualna jest gotowa do uruchomienia. Należy wcisnąć link oznaczony jako `Power on this virtual machine`
+Twoja maszyna wirtualna IBM DataPower Gateway jest gotowa do pierwszego uruchomienia na laptopie laboratoryjnym. Otwórz aplikacje VMWare Worksataion z pulpitu i wykonaj następujące kroki:
+
+1. Upewnij się, że jesteś w zakładce maszyny wirtualnej `datapower-vm` i wcisnąć link oznaczony jako `Power on this virtual machine`
 2. Rozpocznie się proces uruchamiania maszyny, a w nim konfiguracja najważniejszych parametrów DataPower Gateway.
 
 <img src="../images/Lab1_18.png" width="50%">

@@ -3,6 +3,10 @@
 > [!WARNING]
 > Wszystkie ćwiczenia wykonujemy w kontekście użytkownika "admin", chyba że będzie napisane inaczej.
 
+
+> [!TIP]
+> Jeśli w ćwiczeniu masz za zadanie porównać konfiguracje pomiędzy domenami lub użytkownikami, warto otowrzyć nową sesje WebUI IDG w nowy oknie przeglądarki w trybie `Inicognito`/`Private`.
+
 ## Domeny aplikacyjne – zarządzanie uprawnieniami
 
 1. Wybierz z menu `Application domain` z drzewa `Administration -> Configuration`.
