@@ -18,11 +18,11 @@ Skonfigurowane laptopy przekazane przez trenerów.
 
 ### Dzień 1.
 
-<img src="../images/Agenda1.png" width="60%">
+<img src="./images/Agenda1.png" width="60%">
 
 ### Dzień 2.
 
-<img src="../images/Agenda2.png" width="60%">
+<img src="./images/Agenda2.png" width="60%">
 
 ### Prezentacje
 
