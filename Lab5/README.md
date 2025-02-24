@@ -2,7 +2,7 @@
 
 ## Sprawdzanie dostępnych trybów wykonywania kopii zapasowych
 
-W ramach tego ćwiczenia sprawdzisz jakie są dostępne tryby wykonywania kopii zapasowych w Twoim IDG wykorzystując interfejs WebGUI i CLI bramki. IDG może być zainicjowana w dwóch trybach wykonywania kopii: **normal** lub **secure**.
+W ramach tego ćwiczenia sprawdzisz jakie są dostępne tryby wykonywania kopii zapasowych w Twoim IDG wykorzystując interfejs WebGUI i CLI bramki. IDG może być zainicjalizowany w dwóch trybach wykonywania kopii: **normal** lub **secure**.
 
 1. Na stacji roboczej w przeglądarce wywołaj adresIP DPG wykorzystywany w poprzednich ćwiczeniach: `https://adresIP:9090`i poczekaj na pojawienie się ekranu logowania.
 

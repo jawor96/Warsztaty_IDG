@@ -29,11 +29,11 @@ Zanim przejdziesz do ćwiczeń musisz jeszcze przygotować środowisko laborator
 3. Upewnij się, że w polu From jest opcja `ZIP`, a następnie kliknij `Browse...` w polu `File`.
 4. Przejdz do folderu `C:\DataPowerAdminTraining\Lab7` i wybierz plik `BankMockService1.zip`.
 
-<img src="../images/Lab7_47.png" width="70%">
+<img src="../images/Lab7_47.png" width="40%">
 
 5. Kliknij `Next`.
 6. Pozostwa ustawienia domyślne i kliknij `Import` oraz `Done`.
-7. Powtórz procedurę od 2 do 6 dla pliku o nazwie `BankMockService1.zip` znajdującego się w tym samym folderze.
+7. Powtórz procedurę od 2 do 6 dla pliku o nazwie `BankMockService2.zip` znajdującego się w tym samym folderze.
 8. Kliknij `Save Configuration`.
 
 

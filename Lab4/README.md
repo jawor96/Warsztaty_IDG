@@ -2,7 +2,7 @@
 
 ## Procedura wstępna - utworzenie przykładowej konfiguracji
 
-W ramach tego ćwiczenia utworzysz przykładową domenę, w której skonfigurujesz przykładowe usługi, które pozwolą CI zapoznać się w kolejnych ćwiczeniach z funkcjami monitorowania i rozwiązywania problemów dostępnych w bramie IDG.
+W ramach tego ćwiczenia utworzysz przykładową domenę, w której skonfigurujesz przykładowe usługi, które pozwolą Ci zapoznać się w kolejnych ćwiczeniach z funkcjami monitorowania i rozwiązywania problemów dostępnych w bramie IDG.
 
 1. Na stacji roboczej w przeglądarce wywołaj adresIP DPG wykorzystywany w poprzednich ćwiczeniach: `https://adresIP:9090`i poczekaj na pojawienie się ekranu logowania.
 
@@ -234,7 +234,7 @@ W tym ćwiczeniu zapoznasz się z dostępnymi narzędziami pozwalającymi na dia
 
 <img src="../images/Lab5_48.png" width="70%">
 
-Zwróć uwagę, że na górze interfejsu pojawi się dodatkowe ostrzeżenie: Probe is enabled, which impacts performance. Czujki powinny być deaktywowane po zakończeniu testowania.
+Zwróć uwagę, że na górze interfejsu pojawi się dodatkowe ostrzeżenie: `Probe is enabled`, which impacts performance. Czujki powinny być deaktywowane po zakończeniu testowania.
 
 9. Teraz przejdź do wygenerowania zrzutu pakietów przy użyciu narzędzi do przechwytywania pakietów. W tym celu musimy przejść do domeny default wybierając jej nazwę w prawym górnym rogu ekranu
 
@@ -254,7 +254,7 @@ Zwróć uwagę, że na górze interfejsu pojawi się dodatkowe ostrzeżenie: Pro
 
 <img src="../images/Lab5_52.png" width="70%">
 
-15. W otwartym oknie **Execute Action** wybierz `Confirm`.P o wykonaniu testu wybierz `Close`.
+15. W otwartym oknie **Execute Action** wybierz `Confirm`. Po wykonaniu testu wybierz `Close`.
 
 <img src="../images/Lab5_53.png" width="70%">
 

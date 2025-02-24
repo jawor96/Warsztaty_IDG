@@ -2,7 +2,7 @@
 
 ## Wersje DataPower do pobrania z repozytorium IBM
 
-Istnieją trzy podstawowe wersje obrazów VMWare bramy DataPower, które można pobrać i zainstalować w środowisku wirtualizacyjnym:
+Istnieją trzy podstawowe wersje obrazów VMWare bramy IBM DataPower Gateway, które można pobrać i zainstalować w środowisku wirtualizacyjnym:
 
 1. DataPower Gateway for Production
 2. DataPower Gateway for Non-Production
@@ -14,7 +14,7 @@ Powyższe wersje różnią się od siebie **sposobem licencjonowania**, a także
 
 Twoja maszyna wirtualna IBM DataPower Gateway jest gotowa do pierwszego uruchomienia na laptopie laboratoryjnym. Otwórz aplikacje VMWare Worksataion z pulpitu i wykonaj następujące kroki:
 
-1. Upewnij się, że jesteś w zakładce maszyny wirtualnej `datapower-vm` i wcisnąć link oznaczony jako `Power on this virtual machine`
+1. Upewnij się, że jesteś w zakładce maszyny wirtualnej `datapower-vm` i wcisnąć link oznaczony jako `Power on this virtual machine`.
 2. Rozpocznie się proces uruchamiania maszyny, a w nim konfiguracja najważniejszych parametrów DataPower Gateway.
 
 <img src="../images/Lab1_18.png" width="50%">
@@ -26,7 +26,7 @@ login: admin
 password: admin
 ```
 
-4. Po pomyślnym zalogowaniu, uruchamia się konfigurator, który przeprowadzi nam przez najważniejsze parametry systemu DataPower, które należy ustawić na samym początku.
+4. Po pomyślnym zalogowaniu, uruchamia się konfigurator, który przeprowadzi Cię przez najważniejsze parametry systemu DataPower, które należy ustawić na samym początku.
 
 <img src="../images/Lab1_19.png" width="50%">
 
@@ -76,7 +76,7 @@ password: admin
 
 <img src="../images/Lab1_21.png" width="50%">
 
-7. Aby dostać się przez przeglądarkę do interfejsu graficznego musimy poznać adres IP jaki został przydzielony maszynie DataPower poprzez DHCP. Pozostając w terminalu należy wykonać następujące komendy:
+7. Aby dostać się przez przeglądarkę do interfejsu graficznego musisz poznać adres IP jaki został przydzielony maszynie DataPower poprzez DHCP. Pozostając w terminalu należy wykonać następujące komendy:
 
 ```
 configure
@@ -85,7 +85,7 @@ show interface
 
 <img src="../images/Lab1_22.png" width="50%">
 
-8. Na stacji roboczej z której Panstwo korzystacie, adres IP może mieć inną wartość. Należy ją zapisać i wprowadzić do przeglądarki internetowej w postaci:
+8. Na stacji roboczej z której korzystasz, adres IP może mieć inną wartość. Należy ją zapisać i wprowadzić do przeglądarki internetowej w postaci:
 
 ```
     https://adresIP:9090
@@ -136,7 +136,7 @@ Na tym etapie warto wykonać tych kilka podstawowych czynności administracyjnyc
 
 ### Wydłużenie czasu nieaktywności w interfejsie graficznym
 
-Aby zwiększyć ergonomię pracy w trakcie tego szkolenia dobrym pomysłem jest wydłużenie czasu nieaktywności interfejsu graficznego. Standardowo, użytkownik zostanie wylogowany po 600 sekundach co jest wartością właściwą wszędzie tam gdzie zależy nam na bezpieczenstwie. 
+Aby zwiększyć ergonomię pracy w trakcie tego szkolenia dobrym pomysłem jest wydłużenie czasu nieaktywności interfejsu graficznego. Standardowo, użytkownik zostanie wylogowany po 600 sekundach co jest wartością właściwą wszędzie tam, gdzie zależy nam na bezpieczenstwie. 
 
 1. Na środowiskach deweloperskich lub szkoleniowych lepiej jest jednak wydłużyć ten czas na przykład do wartości 6000 sekund czyli 100 min. W tym celu w wyszukiwarce wpisz:
 
@@ -146,20 +146,20 @@ web management
 
 <img src="../images/Lab1_28.png" width="50%">
 
-2. Zmień wartość parametru: `Idle timeou`t z 600 na 6000 [seconds]
+2. Zmień wartość parametru: `Idle timeout` z 600 na 6000 [seconds].
 
-3. Dodatkowo w zakładce `Advanced` mamy możliwość wgrania własnych certyfikatów (Custom TLS server profile), którymi DataPower będzie się przedstawiał użytkownikom w przeglądarce. 
+3. Dodatkowo w zakładce `Advanced` masz możliwość wgrania własnych certyfikatów (Custom TLS server profile), którymi DataPower będzie się przedstawiał użytkownikom w przeglądarce. 
 
 Po wykonaniu zmian, należy wcisnąć przycisk `Apply`, a następnie w prawym górnym rogu `Save Configuration`.
 
 <img src="../images/Lab1_29.png" width="40%">
 
 > [!WARNING]
-> Wszystkie zmiany jakie wprowadzamy przyciskami `Apply` są zapisywane w pamięci RAM urządzenia i aplikowane natychmiast. Wciśnięcie linku `Save Configuration` powoduje permanentne zapisanie tych zmian na dyskach DataPower-a. 
+> Wszystkie zmiany jakie wprowadzisz przyciskami `Apply` są zapisywane w pamięci RAM urządzenia i aplikowane natychmiast. Wciśnięcie linku `Save Configuration` powoduje permanentne zapisanie tych zmian na dyskach DataPower-a. 
 
 ### Ustalenie własnych certyfikatów w interfejsie graficznym GUI
 
-W tym samym miejscu (Web Management Service), na zakładce Advance mamy możliwość podmiany domyśnych certyfikatów prezentowanych przeglądarce przez serwer DataPower w konsoli graficznej. Nie będziemy ich teraz tutaj zmieniać, ale warto pamiętać, że jest to jedna z pierwszych rzeczy jakie wykonuje się po inicjalizacji nowej maszyny z urządzeniem DataPower.
+W tym samym miejscu (Web Management Service), na zakładce Advance masz możliwość podmiany domyśnych certyfikatów prezentowanych przeglądarce przez serwer DataPower w konsoli graficznej. Nie będziesz ich teraz tutaj zmieniać, ale warto pamiętać, że jest to jedna z pierwszych rzeczy jakie wykonuje się po inicjalizacji nowej maszyny z urządzeniem DataPower.
 
 <img src="../images/Lab1_30.png" width="50%">
 

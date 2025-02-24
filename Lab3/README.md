@@ -126,9 +126,7 @@ Tym razem wszystkie działania będą wykonywane w kontekście użytkownika `use
 
 <img src="../images/Lab3_24.png" width="70%">
 
-5. Z głównego menu uruchom zarządzanie plikami i sprawdzić szczegóły certyfikatu:
-
-Z głównego menu uruchomić zarządzanie plikami i sprawdzić szczegóły certyfikatu
+5. Z głównego menu uruchom zarządzanie plikami (`File Management`) i sprawdzić szczegóły certyfikatu:
 
 <img src="../images/Lab3_25.png" width="70%">
 

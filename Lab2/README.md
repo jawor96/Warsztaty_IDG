@@ -9,19 +9,19 @@
 
 ```ssh 192.168.226.129```
 
-<img src="../images/Lab2_01.png" width="70%">
+<img src="../images/Lab2_01.png" width="60%">
 
 2. Sprawdź status usługi SSH, wpisując:
 
 ```show ssh```
 
-<img src="../images/Lab2_02.png" width="70%">
+<img src="../images/Lab2_02.png" width="50%">
 
 3. Sprawdź status usługi WebUI, wpisując:
 
 ```show web-mgmt```
 
-<img src="../images/Lab2_03.png" width="70%">
+<img src="../images/Lab2_03.png" width="50%">
 
 4. Sprawdź interfejsy sieciowe, wpisując:
 
@@ -46,7 +46,10 @@ show name-servers
 
 7. Zweryfikuj czy serwer DNS jest dostępny, wpisując:
 
-    ping 192.168.226.2
+
+```
+ping 192.168.226.2
+```
 
 <img src="../images/Lab2_07.png" width="70%">
 
@@ -160,7 +163,7 @@ Password: P@ssw0rd!
 
 <img src="../images/Lab2_21.png" width="80%">
 
-4. W tym samym drzewie nawigacji wejść w DNS settings i wyłączyć usługę, przestawić Administrative state na disabled i zaaplikuj zmiany.
+4. W tym samym drzewie nawigacji wejść w DNS settings i wyłączyć usługę, przestawić `Administrative state` na `disabled` i zaaplikuj zmiany.
 
 <img src="../images/Lab2_22.png" width="80%">
 
@@ -168,7 +171,7 @@ Password: P@ssw0rd!
 
 <img src="../images/Lab2_23.png" width="70%">
 
-6. "Zepsuj" czas, cofając go np. o 1 godzinę.
+6. "Zepsuj" czas, cofając go np. o 4 godziny.
 
 <img src="../images/Lab2_24.png" width="80%">
 
