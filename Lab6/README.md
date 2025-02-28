@@ -306,8 +306,7 @@ Hasło: tonyf
 <img src="../images/Lab6_29.png" width="70%">
 
 > [!NOTE]
-> Można stworzyć swój własny plik ze wzorami SQL, które chcemy filtrować. W tym celu można wykorzystać szablon dostępny w ramach DP z ejbdccuunblgjubluhfgdngdrhirrcfebhtkruutjece
-`store:///SQL-Injection-Patterns.xml`
+> Można stworzyć swój własny plik ze wzorami SQL, które chcemy filtrować. W tym celu można wykorzystać szablon dostępny w ramach DP z `store:///SQL-Injection-Patterns.xml`
 
 9. Wybierz odpowiedni plik, a następnie kliknij `Done`.
 10. Kliknij `Apply`, a następnie `Save Configuration`.
