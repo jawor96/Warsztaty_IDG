@@ -175,7 +175,7 @@ Password: P@ssw0rd!
 
 <img src="../images/Lab2_24.png" width="80%">
 
-7. Wróć do ustawień `NTP Settings`, dodaj nowy serwer `time.google.com` oraz włączyć `Administrative state (enabled)`. Potwierdź zmiany (`Apply`). Przy okazji zweryfikować na górnej belce, czy mamy "zepsuty" czas. Po akceptacji zmian, status usługi będzie nieaktywny, bo nie może rozwiązać nazwy serwera (wcześniej wyłączyliśmy konfigurację DNS).
+7. Wróć do ustawień `NTP Service`, dodaj nowy serwer `time.google.com` oraz włączyć `Administrative state (enabled)`. Potwierdź zmiany (`Apply`). Przy okazji zweryfikować na górnej belce, czy mamy "zepsuty" czas. Po akceptacji zmian, status usługi będzie nieaktywny, bo nie może rozwiązać nazwy serwera (wcześniej wyłączyliśmy konfigurację DNS).
 
 <img src="../images/Lab2_25.png" width="80%">
 
